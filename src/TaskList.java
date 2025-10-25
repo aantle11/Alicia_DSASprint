@@ -15,6 +15,7 @@ public class TaskList {
         head = null;
     }
 
+    // Add a task
     public void addTask(String description) {
         Task newTask = new Task(description);
         Node newNode = new Node(newTask);
@@ -30,6 +31,7 @@ public class TaskList {
         }
     }
 
+    // Mark task as complete
     public boolean markTaskCompleted(String description) {
         Node current = head;
         while (current.next != null) {
@@ -42,6 +44,7 @@ public class TaskList {
         return false;
     }
 
+    // Print tasks
     public void printTasks() {
         if (head == null) {
             System.out.println("No tasks found");
